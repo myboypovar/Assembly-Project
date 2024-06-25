@@ -16,7 +16,6 @@ If the first run ended successfully (else: Next) the assembler will update the a
 
 5) Second run:
 In the second run, our assembler writes the words of each line of code in binary format, inserts the words (binary bits) to the memory image in the correct position depending on the type of word (data/instruction) and adds each external operand that appeared in the correct spot in the external operands table.
-
 If the assembler encounters a label operand that is not within the symbol table and is not external it yields an error message and then continues to check the rest of the code to discover all errors of this kind and report them (it is the only kind of error that can appear in the second run stage since any other type of error already been reported in the previous stages by now and has already prevented the assembler from entering the second run stage) and in this case, the assembler will finish the second run but will not export any files.
 
 5) Export (generate files):
